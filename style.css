@@ -1,0 +1,221 @@
+/* Переменные */
+:root {
+  --primary: #007bff;
+  --dark: #1a1a1a;
+  --light: #f8f9fa;
+  --white: #ffffff;
+  --gray: #6c757d;
+  --success: #25d366;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--dark);
+  line-height: 1.5;
+  background-color: var(--white);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.whatsapp {
+  background: var(--success);
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+  padding: 60px 0;
+  text-align: center;
+  background: linear-gradient(180deg, #eef5ff 0%, #ffffff 100%);
+}
+
+.hero_title {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  color: var(--dark);
+}
+
+.hero_subtitle {
+  color: var(--gray);
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.hero_actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Кнопки в Hero */
+.call-master,
+.check-prices {
+  padding: 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  transition: 0.3s;
+  display: block;
+  scroll-behavior: smooth;
+}
+
+.call-master {
+  background: var(--primary);
+  color: white;
+}
+
+.check-prices {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+/* Prices Section */
+.prices {
+  padding: 40px 0;
+}
+
+.section-title {
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.price-card {
+  background: var(--light);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.price-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: var(--dark);
+}
+
+.price-card p {
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+.price-card__value {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* Footer */
+.footer {
+  padding: 30px 0;
+  background: var(--light);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--gray);
+  border-top: 1px solid #eee;
+}
+
+
+
+
+/* --- Desktop Styles (от 768px и выше) --- */
+@media (min-width: 768px) {
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    padding: 100px 0;
+  }
+
+  .hero_title {
+    font-size: 3.5rem;
+  }
+
+  .hero_actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .call-master,
+  .check-prices {
+    min-width: 220px;
+  }
+
+  .price-card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .price-card:hover {
+    background: #eef5ff;
+    transform: translateY(-2px);
+  }
+
+  .price-card__value {
+    min-width: 160px;
+    text-align: right;
+    font-size: 1.4rem;
+  }
+}
